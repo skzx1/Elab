@@ -18,4 +18,4 @@ if num1 >= 0 and 0 <= num2 <= 9:
        print(f"Digit {num2} occurs {x} time.")
      else:
        print(f"Digit {num2} occurs {x} times.")
-    
+       

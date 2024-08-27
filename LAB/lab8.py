@@ -1,10 +1,7 @@
-def is_leap(year):
-    leap = False
+x = int(input(""))
+original = x
+reverse = 0
+while x > 0:
+    digit = x % 10
+    reverse = reverse * 10 = digit
     
-    if year % 4 == 0 and  year % 100 != 0 or year % 400 == 0: 
-        leap = True
-     
-    return leap
-
-year = int(input())
-print(is_leap(year))
