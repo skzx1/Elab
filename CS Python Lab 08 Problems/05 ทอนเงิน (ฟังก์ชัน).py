@@ -13,29 +13,19 @@ Enter total money: 1218
  20: 0
   5: 3
   1: 3'''
-def change(money):
-    mo = money // 500
-    money = money % 500
-    mo = money // 100
-    money = money % 100
-    mo = money // 20
-    money = money % 20
-    mo = money // 5
-    money = money % 5
-    mo = money // 1
-    return mo
-left = 0
+def change(money, amount):
+    return money // amount
+
 money = int(input("Enter total money: "))
-b500 = change(money)
-left = left - b500  * 500
-b100 = change(money)
+b500 = change(money, 500)
+left = money - b500  * 500
+b100 = change(left, 100)
 left = left - b100  * 100
-b20 = change(money)
+b20 = change(left, 20)
 left = left - b20  * 20
-b5 = change(money)
+b5 = change(left, 5)
 left = left - b5  * 5
-b1 = change(money)
-left = left - b1  * 1
+b1 = change(left, 1)
 
 print(f"500: {b500}")
 print(f"100: {b100}")
