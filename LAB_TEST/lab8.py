@@ -1,11 +1,10 @@
-c = int(input(""))
-a = 1
-count = 0
-while a < c:
-    b = a
-    while b < c:
-        if a * a + b * b == c * c:
-            count += 1
-        b += 1
-    a += 1
-print(count)
+def tri_recursion(k):
+  if(k > 0):
+    result = k + tri_recursion(k - 1)
+    print(result)
+  else:
+    result = 0
+  return result
+
+print("\n\nRecursion Example Results")
+tri_recursion(6)
