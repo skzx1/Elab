@@ -1,7 +1,11 @@
-x = int(input(""))
-original = x
-reverse = 0
-while x > 0:
-    digit = x % 10
-    reverse = reverse * 10 = digit
-    
+c = int(input(""))
+a = 1
+count = 0
+while a < c:
+    b = a
+    while b < c:
+        if a * a + b * b == c * c:
+            count += 1
+        b += 1
+    a += 1
+print(count)
