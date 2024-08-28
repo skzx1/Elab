@@ -31,11 +31,11 @@ def to_seconds(h, m, s):
     Sec = h * 3600 + m * 60 + s
     return Sec
 def time_elapsed(start, finish):
-    h = (finish - start) // 3600
-    m = (finish - start) / 3600
-    s = (finish - start)  % 60
-    el = f"{h:.0f} hours {m:.0f} minutes {s:.0f} seconds."
-    return el
+    elapsed = finish - start
+    hours = elapsed // 3600
+    minutes = (elapsed % 3600) // 60
+    seconds = elapsed % 60
+    return f"{hours} hours {minutes} minutes {seconds} seconds."
 def read_time():
     print('>> ', end='')
     hour = read_hour()
