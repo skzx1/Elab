@@ -15,3 +15,15 @@ Alternating Sum from 1 to 10 is -5
 
 Enter n of series: 15
 Alternating Sum from 1 to 15 is 8'''
+def Alternative(n):
+     sum = 0
+     while n > 0:
+        if n % 2 == 0:
+            sum -= n
+        else:
+            sum += n
+        n -= 1
+     return sum
+
+n = int(input("Enter n of series: "))
+print("Alternating Sum from 1 to {:d} is {:d}".format(n, Alternative(n)))
