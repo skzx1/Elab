@@ -49,6 +49,18 @@ Minimum score is 22.75.
 Average score is 64.10.
 Standard deviation is 23.17.'''
 data = []
+def find_sd(l):
+    n = len(l)
+    mean = sum(l) / n
+    sum_diff = sum((x - mean) ** 2 for x in l)
+    return (sum_diff / (n - 1)) ** 0.5
+
+def average(l):
+    total = 0
+    for value in l:
+        total += value
+    return total / len(l)
+
 while True:
     x = float(input("Enter score: "))
     if x == -1:
@@ -57,3 +69,8 @@ while True:
         print("Score is out of range.")
     else:
       data.append(x)
+if len(data) != 0 :
+    print(f"Maximum score is {max(data):.2f}.")
+    print(f"Minimum score is {min(data):.2f}.")
+    print(f"Average score is {average(data):.2f}.")
+    print(f"Standard deviation is {find_sd(data):.2f}.")
