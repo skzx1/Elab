@@ -46,18 +46,33 @@ m บรรทัด แต่ละบรรทัด แสดง n ตัว�
                     4**21000
                     *44*2110
                     2*212*10'''
+mn = input()
+p = int(input())
 
-def minesweeper(mn, p, *bomb):
-    m, n = map(int, mn.split('x'))
-    board = [['0' for _ in range(n)] for _ in range(m)]
-    for b in bomb:
-        x, y = map(int, b.split(','))
-        board[x][y] = '*'
-        for i in range(x-1, x+2):
-            for j in range(y-1, y+2):
-                if 0 <= i < m and 0 <= j < n and board[i][j] != '*':
-                    board[i][j] = str(int(board[i][j]) + 1)
-    return '\n'.join([''.join(row) for row in board])
+size = mn.split('x')
+m = int(size[0])
+n = int(size[1])
+board = []
+for i in range(m):
+    row = ['0'] * n
+    board.append(row)
+bombs = []
+for i in range(p):
+    bombs.append(input())
+    
+for bomb in bombs:
+    x, y = bomb.split(',')
+    x = int(x)
+    y = int(y)
+    board[x][y] = '*'
+    for i in range(x-1, x+2):
+        for j in range(y-1, y+2):
+            if 0 <= i < m and 0 <= j < n and board[i][j] != '*':
+                board[i][j] = str(int(board[i][j]) + 1)
+result = []
+for row in board:
+    result.append(''.join(row))
+bigborad = '\n'.join(result)
 
-print(minesweeper('8x10', 4, '1,1', '2,4', '5,2', '6,8'))
+print(bigborad)
 
