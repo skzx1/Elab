@@ -34,10 +34,21 @@
 10: 2
 5: 1
 1: 1'''
-count = int(input())
+n = int(input())
 data = []
-for i in range(count):
-     data.append(int(input()))
+for i in range(n):
+     money = int(input())
+     data.append(money)
 change = int(input())
 data.sort(reverse=True)
-print(data)
+for cash in data:
+     if change >= cash:
+          amount = 0
+          amount = change // cash
+          change -= amount * cash
+          print(f'{cash}: {amount}')
+
+
+
+
+
