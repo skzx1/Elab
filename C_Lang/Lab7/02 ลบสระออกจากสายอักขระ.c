@@ -8,7 +8,6 @@ Output: hll, wrld
  Input: abcdef 123456
 Output: bcdf 123456
 
-[hide line #]
 #include <stdio.h>
 
 int remove_vowel(
