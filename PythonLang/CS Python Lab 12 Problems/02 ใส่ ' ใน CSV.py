@@ -10,6 +10,7 @@
 word = input()
 result = ""
 data = ""
+data2 = 0
 for i in word:
      if i == ',':
        result += '"' + data.strip() + '",'
