@@ -15,7 +15,7 @@ It is 1 days 3 hours and 58 minutes.
 int main() {
     int computer_time = 785;  // ในโปรแกรมตรวจอาจเปลี่ยนค่าของตัวแปรนี้ แต่นิสิตไม่ต้องเปลี่ยนค่าของตัวแปรนี้
     int days, hours, minutes;
-    
+    int c;
     days = computer_time / 1440;
     computer_time -= days * 1440;
     hours = computer_time / 60;
