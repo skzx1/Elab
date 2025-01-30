@@ -1,1 +1,2 @@
+print("mu")
 print("haha")
